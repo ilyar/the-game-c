@@ -18,6 +18,15 @@ if(WEB OR PLATFORM STREQUAL "Web")
     endif()
 endif()
 
+# Default to size-optimized build for Web and Debug for desktop
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    if(WEB OR PLATFORM STREQUAL "Web")
+        set(CMAKE_BUILD_TYPE "MinSizeRel" CACHE STRING "Build type" FORCE)
+    else()
+        set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Build type" FORCE)
+    endif()
+endif()
+
 project(pure_game LANGUAGES C)
 
 # Export compilation database for IDE integration
