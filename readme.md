@@ -6,6 +6,7 @@ Starter template for Step 1 of building The Game in pure C using [raylib](https:
 
 1. C compiler with C23 support (`GCC 13+` or `Clang 18+`)
 2. [CMake](https://cmake.org/) 3.25 or newer
+3. [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html) 7.0.0 for the Web build
 
 ## How to Run
 
